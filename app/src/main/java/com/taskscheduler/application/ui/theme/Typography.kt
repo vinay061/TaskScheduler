@@ -1,6 +1,7 @@
 package com.taskscheduler.application.ui.theme
 
 import androidx.compose.material3.Typography
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -35,13 +36,6 @@ val TaskyTypography = Typography(
         fontSize = 16.sp,
         lineHeight = 24.sp
     ),
-    // title large is used for headline x-small
-    titleLarge = TextStyle(
-        fontFamily = InterFamilyFont,
-        fontWeight = FontWeight.Medium,
-        fontSize = 14.sp,
-        lineHeight = 20.sp
-    ),
     bodySmall = TextStyle(
         fontFamily = InterFamilyFont,
         fontWeight = FontWeight.Medium,
@@ -66,11 +60,22 @@ val TaskyTypography = Typography(
         fontSize = 14.sp,
         lineHeight = 20.sp
     ),
-    // label large is used for label x-small
-    labelLarge = TextStyle(
-        fontFamily = InterFamilyFont,
-        fontWeight = FontWeight.Bold,
-        fontSize = 11.sp,
-        lineHeight = 12.sp
-    ),
+)
+
+val Typography.xSmallHeadline: TextStyle
+@Composable
+get() = TextStyle(
+    fontFamily = InterFamilyFont,
+    fontWeight = FontWeight.Medium,
+    fontSize = 14.sp,
+    lineHeight = 20.sp
+)
+
+val Typography.xSmallLabel: TextStyle
+@Composable
+get() =  TextStyle(
+    fontFamily = InterFamilyFont,
+    fontWeight = FontWeight.Bold,
+    fontSize = 11.sp,
+    lineHeight = 12.sp
 )
