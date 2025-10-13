@@ -3,49 +3,43 @@ package com.taskscheduler.application.core.presentation.designsystem
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
-// Light Mode
-val LightBackground = Color(0xFF16161C)
-val LightSurface = Color(0xFFFFFFFF)
-val LightOnSurface = Color(0xFF3A4045)
-val LightPrimary = Color(0xFF16161C)
-val LightOutline = Color(0xFFB7C6DE)
-val LightError = Color(0xFFF34B51)
-val LightSuccess = Color(0xFF279F70)
-val LightLink = Color(0xFF8E97FD)
+//Gray scale colors
+val TaskyGray1000 = Color(0xFF16161C)
+val TaskyGray900 = Color(0xFF1B1B20)
+val TaskyGray800 = Color(0xFF242428)
+val TaskyGray700 = Color(0xFF3A4045)
+val TaskyGray600 = Color(0xFF3B3B42)
+val TaskyGray500 = Color(0xFF76808F)
+val TaskyGray400 = Color(0xFF808B9B)
+val TaskyGray300 = Color(0xFFB7C6DE)
+val TaskyGray200 = Color(0xFFF2F3F7)
+val TaskyGray100 = Color(0xFFFFFFFF)
 
-val LightOnBackground = Color(0xFFFFFFFF)
-val LightSurfaceHigher = Color(0xFFF2F3F7)
-val LightOpacity60 = Color(0x99F2F3F7)  // 60%
-val LightOnSurfaceVariant = Color(0xFF76808F)
-val LightOnSurfaceVariant70 = Color(0xB376808F)  // 70%
-val LightBackgroundOpacity50 = Color(0x8016161C) // 50%
+// Semantic colors
+val TaskyRed600 = Color(0xFFF34B51)
+val TaskyRed400 = Color(0xFFF88084)
+val TaskyGreen600 = Color(0xFF279F70)
+val TaskyGreen500 = Color(0xFF3BD699)
+val TaskyPurple500 = Color(0xFF8E97FD)
+val TaskyPurple300 = Color(0xFFB1B8FE)
 
-
-// Dark Mode
-val DarkBackground = Color(0xFF16161C)
-val DarkSurface = Color(0xFF1B1B20)
-val DarkOnSurface = Color(0xFFF2F3F7)
-val DarkPrimary = Color(0xFFFFFFFF)
-val DarkOutline = Color(0xFF3B3B42)
-val DarkError = Color(0xFFF88084)
-val DarkSuccess = Color(0xFF3BD699)
-val DarkLink = Color(0xFFB1B8FE)
-
-val DarkOnBackground = Color(0xFFFFFFFF)
-val DarkSurfaceHigher = Color(0xFF242428)
-val DarkOpacity60 = Color(0x99242428) // 60%
-val DarkOnSurfaceVariant = Color(0xFF808B9B)
-val DarkOnSurfaceVariant70 = Color(0xB3808B9B) // 70%
-val DarkBackgroundOpacity50 = Color(0x8016161C) // 50%
+//Opacity variants
+val TaskyGray2000Opacity60 = Color(0x99F2F3F7)
+val TaskyGray5000Opacity70 = Color(0xB376808F)
+val TaskyGray10000Opacity50 = Color(0x8016161C)
+val TaskyGray400Opacity70 = Color(0xB3808B9B)
+val TaskyGray8000Opacity60 = Color(0x99242428)
 
 // Brand colors
+val TaskyBrandGreen = Color(0xFF279F70)
+val TaskyBrandLime = Color(0xFFCAEF45)
+val TaskyBrandYellow = Color(0xFFFDEF8A)
+val TaskyBrandGreenOpacity80 = Color(0xCC279F70)
+val TaskyBrandLimeOpacity80 = Color(0xCCCCEF45)
 
-val BrandSecondary = Color(0xFF279F70)
-val BrandTertiary = Color(0xFFCAEF45)
-val BrandSupplementary = Color(0xFFFDEF8A)
 
-val BrandSecondary80 = Color(0xCC279F70) // 80%
-val BrandTertiary80 = Color(0xCCCCEF45) // 80%
+
+
 
 data class CustomColors(
     val success: Color,
@@ -61,29 +55,28 @@ data class CustomColors(
 )
 
 val DarkCustomColor = CustomColors(
-    success = DarkSuccess,
-    link = DarkLink,
-    surfaceHigherWithOpacity = DarkOpacity60,
-    surfaceVariantWithOpacity = DarkOnSurfaceVariant70,
-    backgroundWithOpacity = DarkBackgroundOpacity50,
-    brandSecondary = BrandSecondary,
-    brandTertiary = BrandTertiary,
-    brandSupplementary = BrandSupplementary,
-    brandSecondaryWithOpacity = BrandSecondary80,
-    brandTertiaryWithOpacity = BrandTertiary80,
+    success = TaskyGreen500,
+    link = TaskyPurple300,
+    surfaceHigherWithOpacity = TaskyGray8000Opacity60,
+    surfaceVariantWithOpacity = TaskyGray400Opacity70,
+    backgroundWithOpacity = TaskyGray10000Opacity50,
+    brandSecondary = TaskyBrandGreen,
+    brandTertiary = TaskyBrandLime,
+    brandSupplementary = TaskyBrandYellow,
+    brandSecondaryWithOpacity = TaskyBrandGreenOpacity80,
+    brandTertiaryWithOpacity = TaskyBrandLimeOpacity80,
 )
 
 val LightCustomColor = CustomColors(
-    success = LightSuccess,
-    link = LightLink,
-    surfaceHigherWithOpacity = LightOpacity60,
-    surfaceVariantWithOpacity = LightOnSurfaceVariant70,
-    backgroundWithOpacity = LightBackgroundOpacity50,
-    brandSecondary = BrandSecondary,
-    brandTertiary = BrandTertiary,
-    brandSupplementary = BrandSupplementary,
-    brandSecondaryWithOpacity = BrandSecondary80,
-    brandTertiaryWithOpacity = BrandTertiary80,
+    success = TaskyGreen600,
+    link = TaskyPurple500,
+    surfaceHigherWithOpacity = TaskyGray2000Opacity60,
+    surfaceVariantWithOpacity = TaskyGray5000Opacity70,
+    backgroundWithOpacity = TaskyGray10000Opacity50,
+    brandSecondary = TaskyBrandGreen,
+    brandTertiary = TaskyBrandLime,
+    brandSupplementary = TaskyBrandYellow,
+    brandSecondaryWithOpacity = TaskyBrandGreenOpacity80,
+    brandTertiaryWithOpacity = TaskyBrandLimeOpacity80,
 )
-
 val LocalCustomColors = staticCompositionLocalOf { DarkCustomColor }
