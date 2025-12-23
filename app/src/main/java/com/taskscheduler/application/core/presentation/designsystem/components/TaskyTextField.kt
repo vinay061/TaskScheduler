@@ -60,11 +60,11 @@ fun TaskyTextField(
                 ) {
                     if(state.text.isEmpty()) {
                         Text(
+                            modifier = Modifier.fillMaxWidth(),
                             text = hint,
                             style = TaskyTypography.bodyMedium.copy(
                                 color = MaterialTheme.colorScheme.extended.onSurface
                             ),
-                            modifier = Modifier.fillMaxWidth()
                         )
                     }
                     innerBox()

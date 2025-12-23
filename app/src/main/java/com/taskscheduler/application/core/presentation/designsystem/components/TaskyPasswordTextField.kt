@@ -12,6 +12,7 @@ import androidx.compose.foundation.text.input.TextFieldState
 import androidx.compose.foundation.text.input.TextObfuscationMode
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -22,8 +23,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.taskscheduler.application.core.presentation.designsystem.EyeIconClosed
 import com.taskscheduler.application.core.presentation.designsystem.EyeIconOpen
-import com.taskscheduler.application.core.presentation.designsystem.LocalCustomColors
 import com.taskscheduler.application.core.presentation.designsystem.TaskSchedulerTheme
+import com.taskscheduler.application.core.presentation.designsystem.extended
 import com.taskscheduler.application.ui.theme.TaskyTypography
 
 @Composable
@@ -34,12 +35,10 @@ fun TaskyPasswordTextField(
     onTogglePasswordVisibility: () -> Unit,
     hint: String,
 ) {
-    val customColors = LocalCustomColors.current
-
     BasicSecureTextField(
         modifier = modifier
             .clip(RoundedCornerShape(16.dp))
-            .background(customColors.brandSecondary) // color to be changed after pulling the changes from develop branch. on surface variant from Colors.kt
+            .background(MaterialTheme.colorScheme.extended.surfaceHigher)
             .padding(12.dp),
         state = state,
         textObfuscationMode = if(isPasswordVisible) {
@@ -61,7 +60,11 @@ fun TaskyPasswordTextField(
                 ) {
                     if (state.text.isEmpty()) {
                         Text(
-                            text = hint
+                            modifier = Modifier.fillMaxWidth(),
+                            text = hint,
+                            style = TaskyTypography.bodyMedium.copy(
+                                color = MaterialTheme.colorScheme.extended.onSurface
+                            ),
                         )
                     }
                     innerBox()
@@ -74,7 +77,7 @@ fun TaskyPasswordTextField(
                             EyeIconClosed
                         } else EyeIconOpen,
                         contentDescription = null,
-                        tint = customColors.brandSupplementary // color to be changed from colors.kt, on surface variant
+                        tint = MaterialTheme.colorScheme.extended.onSurfaceVariant,
                     )
                 }
             }
