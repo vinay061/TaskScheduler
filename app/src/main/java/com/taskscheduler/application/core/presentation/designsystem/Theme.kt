@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import com.taskscheduler.application.ui.theme.TaskyTypography
 import com.taskscheduler.application.ui.theme.Typography
 
 val DarkColorScheme = darkColorScheme(
@@ -55,7 +56,7 @@ fun TaskSchedulerTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        typography = TaskyTypography,
         content = content
     )
 }
