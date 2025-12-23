@@ -52,6 +52,9 @@ data class CustomColors(
     val brandSupplementary: Color,
     val brandSecondaryWithOpacity: Color,
     val brandTertiaryWithOpacity: Color,
+    val onSurfaceVariant: Color,
+    val surfaceHigher: Color,
+    val onSurface: Color,
 )
 
 val DarkCustomColor = CustomColors(
@@ -65,6 +68,9 @@ val DarkCustomColor = CustomColors(
     brandSupplementary = TaskyBrandYellow,
     brandSecondaryWithOpacity = TaskyBrandGreenOpacity80,
     brandTertiaryWithOpacity = TaskyBrandLimeOpacity80,
+    onSurfaceVariant = TaskyGray500,
+    surfaceHigher = TaskyGray200,
+    onSurface = TaskyGray700,
 )
 
 val LightCustomColor = CustomColors(
@@ -78,5 +84,8 @@ val LightCustomColor = CustomColors(
     brandSupplementary = TaskyBrandYellow,
     brandSecondaryWithOpacity = TaskyBrandGreenOpacity80,
     brandTertiaryWithOpacity = TaskyBrandLimeOpacity80,
+    onSurfaceVariant = TaskyGray400,
+    surfaceHigher = TaskyGray200,
+    onSurface = TaskyGray700,
 )
 val LocalCustomColors = staticCompositionLocalOf { DarkCustomColor }
