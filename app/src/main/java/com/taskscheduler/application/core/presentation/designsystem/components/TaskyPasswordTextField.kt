@@ -28,6 +28,7 @@ import com.taskscheduler.application.ui.theme.TaskyTypography
 
 @Composable
 fun TaskyPasswordTextField(
+    modifier: Modifier = Modifier,
     state: TextFieldState,
     isPasswordVisible: Boolean,
     onTogglePasswordVisibility: () -> Unit,
@@ -36,6 +37,10 @@ fun TaskyPasswordTextField(
     val customColors = LocalCustomColors.current
 
     BasicSecureTextField(
+        modifier = modifier
+            .clip(RoundedCornerShape(16.dp))
+            .background(customColors.brandSecondary) // color to be changed after pulling the changes from develop branch. on surface variant from Colors.kt
+            .padding(12.dp),
         state = state,
         textObfuscationMode = if(isPasswordVisible) {
             TextObfuscationMode.Visible
@@ -44,10 +49,6 @@ fun TaskyPasswordTextField(
         keyboardOptions = KeyboardOptions(
             keyboardType = KeyboardType.Password
         ),
-        modifier = Modifier
-            .clip(RoundedCornerShape(16.dp))
-            .background(customColors.brandSecondary) // color to be changed after pulling the changes from develop branch. on surface variant from Colors.kt
-            .padding(12.dp),
         decorator = { innerBox ->
             Row(
                 modifier = Modifier
@@ -89,7 +90,7 @@ private fun TaskyPasswordTextFieldPreview() {
             state = TextFieldState(),
             hint = "Password",
             isPasswordVisible = false,
-            onTogglePasswordVisibility = {},
+            onTogglePasswordVisibility = { /* no-op */ },
         )
     }
 }
