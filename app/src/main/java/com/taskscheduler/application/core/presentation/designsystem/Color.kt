@@ -1,5 +1,8 @@
 package com.taskscheduler.application.core.presentation.designsystem
 
+import androidx.compose.material3.ColorScheme
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 
@@ -88,4 +91,9 @@ val LightCustomColor = CustomColors(
     surfaceHigher = TaskyGray200,
     onSurface = TaskyGray700,
 )
+
+val ColorScheme.extended : CustomColors
+    @ReadOnlyComposable
+    @Composable
+    get() = LocalCustomColors.current
 val LocalCustomColors = staticCompositionLocalOf { DarkCustomColor }
