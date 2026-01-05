@@ -60,7 +60,9 @@ fun TaskyTextField(
                 ) {
                     if(state.text.isEmpty()) {
                         Text(
-                            modifier = Modifier.fillMaxWidth(),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(8.dp),
                             text = hint,
                             style = TaskyTypography.bodyMedium.copy(
                                 color = MaterialTheme.colorScheme.extended.onSurface
@@ -91,6 +93,18 @@ private fun TaskyTextFieldPreview() {
             state = TextFieldState(),
             hint = "User Name",
             endIcon = Icons.Default.Check
+        )
+    }
+}
+
+@Preview
+@Composable
+private fun TaskyTextFieldPreviewTwo() {
+    TaskSchedulerTheme {
+        TaskyTextField(
+            state = TextFieldState(),
+            hint = "User Name",
+            endIcon = null
         )
     }
 }
