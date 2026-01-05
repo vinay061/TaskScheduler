@@ -12,10 +12,7 @@ class RegisterViewModel: ViewModel() {
     fun onAction(action: RegisterAction) {
         when(action) {
             is RegisterAction.OnRegisterCick -> { TODO() }
-            is RegisterAction.OnTogglePasswordVisibilityClick -> {
-                _state.value.copy(
-                isPasswordVisible = !_state.value.isPasswordVisible
-            ) }
+            is RegisterAction.OnTogglePasswordVisibilityClick -> { TODO() }
             is RegisterAction.OnLogInClick -> { TODO() }
         }
     }
