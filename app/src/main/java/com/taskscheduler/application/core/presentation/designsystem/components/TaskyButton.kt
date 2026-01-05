@@ -14,9 +14,9 @@ import com.taskscheduler.application.core.presentation.designsystem.extended
 @Composable
 fun TaskyButton(
     title: String,
-    enabled: Boolean,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
+    enabled: Boolean = true,
 ) {
     Button(
         onClick = onClick,
@@ -58,7 +58,6 @@ fun TaskyTextButton(
 private fun PreviewTaskyButton() {
     TaskyButton(
         title = "Get Started",
-        enabled = true,
         onClick = {},
     )
 }
