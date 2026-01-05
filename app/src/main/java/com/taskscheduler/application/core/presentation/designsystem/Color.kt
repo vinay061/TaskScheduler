@@ -40,6 +40,8 @@ val TaskyBrandYellow = Color(0xFFFDEF8A)
 val TaskyBrandGreenOpacity80 = Color(0xCC279F70)
 val TaskyBrandLimeOpacity80 = Color(0xCCCCEF45)
 
+val TaskyBlack = Color(0xFF000000)
+
 
 
 
@@ -58,6 +60,7 @@ data class CustomColors(
     val onSurfaceVariant: Color,
     val surfaceHigher: Color,
     val onSurface: Color,
+    val surfaceButton: Color,
 )
 
 val DarkCustomColor = CustomColors(
@@ -74,6 +77,7 @@ val DarkCustomColor = CustomColors(
     onSurfaceVariant = TaskyGray500,
     surfaceHigher = TaskyGray200,
     onSurface = TaskyGray700,
+    surfaceButton = TaskyBlack,
 )
 
 val LightCustomColor = CustomColors(
@@ -90,6 +94,7 @@ val LightCustomColor = CustomColors(
     onSurfaceVariant = TaskyGray400,
     surfaceHigher = TaskyGray200,
     onSurface = TaskyGray700,
+    surfaceButton = TaskyBlack,
 )
 
 val ColorScheme.extended : CustomColors

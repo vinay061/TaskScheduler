@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TaskScheduler</string>
+    <string name="register_screen_title">Create your account</string>
+    <string name="register_screen_username">User name</string>
+    <string name="register_screen_email">Email</string>
+    <string name="register_screen_password">Password</string>
 </resources>
