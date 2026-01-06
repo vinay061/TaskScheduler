@@ -7,4 +7,10 @@
     <string name="register_screen_button_get_started">GET STARTED</string>
     <string name="register_screen_login_text">ALREADY HAVE AN ACCOUNT?</string>
     <string name="registe_screen_login_text_button">LOG IN</string>
+    <string name="login_screen_title">Welcome Back!</string>
+    <string name="login_screen_username_hint">User Name</string>
+    <string name="login_screen_password_hint">Password</string>
+    <string name="login_screen_button_title">LOG IN</string>
+    <string name="login_screen_signup_text">DON\'T HAVE AN ACCOUNT?</string>
+    <string name="login_screen_signup_textButton">SIGN UP</string>
 </resources>
