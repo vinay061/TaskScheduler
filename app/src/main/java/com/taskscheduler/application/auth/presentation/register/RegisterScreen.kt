@@ -114,13 +114,13 @@ private fun Content(
                     state = state.password,
                     isPasswordVisible = state.isPasswordVisible,
                     hint = stringResource(R.string.register_screen_password),
-                    onTogglePasswordVisibility = { onAction.invoke(
+                    onTogglePasswordVisibility = { onAction(
                         RegisterAction.OnTogglePasswordVisibilityClick
                     ) }
                 )
                 TaskyButton(
                     title = stringResource(R.string.register_screen_button_get_started),
-                    onClick = { onAction.invoke(
+                    onClick = { onAction(
                         RegisterAction.OnRegisterCick
                     )},
                 )
@@ -133,7 +133,7 @@ private fun Content(
                     )
                     TaskyTextButton(
                         title = stringResource(R.string.registe_screen_login_text_button),
-                        onClick = { onAction.invoke(
+                        onClick = { onAction(
                             RegisterAction.OnLogInClick
                         )}
                     )
