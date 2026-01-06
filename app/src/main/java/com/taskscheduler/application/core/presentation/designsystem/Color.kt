@@ -61,6 +61,8 @@ data class CustomColors(
     val surfaceHigher: Color,
     val onSurface: Color,
     val surfaceButton: Color,
+    val backGroundScreen: Color,
+    val surfaceCard: Color
 )
 
 val DarkCustomColor = CustomColors(
@@ -78,6 +80,8 @@ val DarkCustomColor = CustomColors(
     surfaceHigher = TaskyGray200,
     onSurface = TaskyGray700,
     surfaceButton = TaskyBlack,
+    backGroundScreen = TaskyGray1000,
+    surfaceCard = TaskyGray100,
 )
 
 val LightCustomColor = CustomColors(
@@ -95,6 +99,8 @@ val LightCustomColor = CustomColors(
     surfaceHigher = TaskyGray200,
     onSurface = TaskyGray700,
     surfaceButton = TaskyBlack,
+    backGroundScreen = TaskyGray1000,
+    surfaceCard = TaskyGray100
 )
 
 val ColorScheme.extended : CustomColors
